@@ -3,7 +3,11 @@ import pygame
 from character import *
 from pygame.locals import *
 from constants import *
+<<<<<<< HEAD
 from resources import *
+=======
+
+>>>>>>> origin/master
 
 class ControlledCharacter(Character):
     def on_left(self):
@@ -18,6 +22,7 @@ class ControlledCharacter(Character):
 
     def on_start(self):
         self.direction = True
+<<<<<<< HEAD
         self.right = True
         self.jump=False
         self.color=False
@@ -41,3 +46,6 @@ class ControlledCharacter(Character):
             
             
     
+=======
+        self.right = True
+>>>>>>> origin/master

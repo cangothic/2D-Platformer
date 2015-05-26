@@ -111,4 +111,8 @@ class Character(Actor):
         yoffset = -sprite.get_height()
         game.draw(sprite, (xcam + xoffset, ycam + yoffset))
         if DEBUG:
+<<<<<<< HEAD
             game.draw_rect(pygame.Rect(xcam - self.collider.w/2, ycam - self.collider.h, self.collider.w, self.collider.h))
+=======
+            game.draw_rect(pygame.Rect(xcam - self.collider.w/2, ycam - self.collider.h, self.collider.w, self.collider.h))
+>>>>>>> origin/master

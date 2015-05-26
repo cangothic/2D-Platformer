@@ -1,6 +1,9 @@
 import game
 import pygame
+<<<<<<< HEAD
 import eventos
+=======
+>>>>>>> origin/master
 from constants import *
 from resources import *
 from player import *
@@ -11,6 +14,7 @@ from camera import *
 from gamelogic import *
 from controlled_character import *
 
+<<<<<<< HEAD
 # Game starts!
 game.start(DISP_W*2, DISP_H*2)
 resourcesMonos = Resources('graphics/arc22.png')
@@ -24,6 +28,21 @@ tilemap.load_tilesets('map1.json')
 tilemap.load_map('map1.json')
 camera = Camera(0, 0, player, [player,ai,ai2,ai3], tilemap, True, 0.25)
 gamelogic = Gamelogic([player,ai,ai2,ai3], tilemap)
+=======
+
+# Game starts!
+game.start(DISP_W*2, DISP_H*2)
+
+resources = Resources()
+
+player = Player(40, 40, pygame.Rect(0,0,15,35), resources.player)
+ai = ControlledCharacter(100, 40, pygame.Rect(0,0,15,35), resources.player)
+tilemap = Tilemap()
+tilemap.load_tilesets('map1.json')
+tilemap.load_map('map1.json')
+camera = Camera(0, 0, player, [player,ai], tilemap, True, 0.25)
+gamelogic = Gamelogic([player,ai], tilemap)
+>>>>>>> origin/master
 
 clock = game.clock()
 
@@ -37,6 +56,7 @@ sheet = game.load_image('graphics/blocks1.png')
 # Gameloop
 gamelogic.start()
 while True:
+<<<<<<< HEAD
     aiplayeriguales=abs(player.x-ai.x)<15 and abs(player.y-ai.y)<15
     aiai2iguales=abs(ai2.x-ai.x)<15 and abs(ai2.y-ai.y)<15
     ai3playeriguales= abs(player.x-ai3.x)<15 and abs(player.y-ai3.y)<15
@@ -44,6 +64,8 @@ while True:
     evento = eventos.evento(player,ai,ai2,ai3,camera,situacion)
     if(evento!=None):
         evento()
+=======
+>>>>>>> origin/master
     events = game.get_events()
     if 'QUIT' in events:
         game.quit_game()
@@ -59,3 +81,8 @@ while True:
     game.debug_txt('FPS: '+str(clock.get_fps())[:4], (540,380),RED) 
     
     game.update()
+<<<<<<< HEAD
+=======
+    
+    
+>>>>>>> origin/master
